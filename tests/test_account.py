@@ -4,7 +4,6 @@ import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import *
-from fixtrs import *
 from data_generator import user_data
 
 
@@ -50,7 +49,7 @@ class TestProfileAccess:
         WebDriverWait(driver_log, 10).until(EC.presence_of_element_located(LOGOUT_BUTTON)).click()
 
         logo_butt_acc = WebDriverWait(driver_log, 10).until(
-            EC.presence_of_element_located((By.XPATH, ".//div[@class='AppHeader_header__logo__2D0X2']"))
+            EC.presence_of_element_located(LOGO_BUTTON)
         )
         # Проверка, что класс логотипа соответствует ожидаемому
         assert "AppHeader_header__logo__2D0X2" in logo_butt_acc.get_attribute("class")

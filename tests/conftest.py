@@ -1,10 +1,10 @@
 # tests/fixtures.py
-
 import pytest
 from selenium import webdriver
 import random
 import string
 from transliterate import translit
+from data_generator import *
 
 @pytest.fixture(scope="session")
 def driver():
@@ -38,3 +38,20 @@ def driver_log():
     yield driver_log
     driver_log.quit()
 
+@pytest.fixture
+def generate_email_fixture():
+    return generate_email()
+
+@pytest.fixture
+def generate_password_fixture():
+    return generate_password()
+
+@pytest.fixture
+def registration_data(generate_email_fixture, generate_password_fixture):
+    email, name = generate_email_fixture
+    password = generate_password_fixture
+    return {
+        "email": email,
+        "name": name,
+        "password": password
+    }

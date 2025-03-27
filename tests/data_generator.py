@@ -10,7 +10,6 @@ names = [
     "Виктория", "Оля", "Элеонора", "Марина", "Алиса"
 ]
 
-
 user_data = {
     "email": "pavel44prac@ya.ru",
     "password": "DF45hgg_35"

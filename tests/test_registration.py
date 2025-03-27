@@ -4,7 +4,6 @@ import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators import *
-from fixtrs import *
 
 
 def test_successful_registration(driver_reg, registration_data):
