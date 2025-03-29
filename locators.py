@@ -8,6 +8,7 @@ REGISTER_NAME_FIELD = (By.XPATH, "//input[@name='name']")# Поле для им�
 REGISTER_EMAIL_FIELD = (By.XPATH, "//input[@value='']")# Поле для email
 REGISTER_PASSWORD_FIELD = (By.XPATH, "//input[@name='Пароль']")# Поле для пароля
 REGISTER_BUTTON = (By.XPATH, "//button[text()='Зарегистрироваться']") # Кнопка регистрации
+INCOR_PASS = (By.XPATH, "//p[contains(text(),'Некорректный пароль')]")
 
 ODER_BUTTON = (By.XPATH, "//button[text()='Оформить заказ']") # Кнопка "Оформить заказ"
 LOGO_BUTTON = (By.XPATH, ".//div[@class='AppHeader_header__logo__2D0X2']") # Кнопка Лототип
@@ -27,3 +28,4 @@ CONSTRUCTOR_BUTTON = (By.LINK_TEXT, "Конструктор")
 CONSTRUCTOR_BUNS_BUTTON = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG') and .//span[text()='Булки']]")# Кнопка "Булки"
 CONSTRUCTOR_SAUCES_BUTTON = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG') and .//span[text()='Соусы']]")# Кнопка "Соусы"
 CONSTRUCTOR_FILLINGS_BUTTON = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG') and .//span[text()='Начинки']]")# Кнопка "Начинки"
+SELECT_ITEM = (By.XPATH, "//*[contains(@class, 'tab_tab_type_current')]")

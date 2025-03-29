@@ -4,6 +4,7 @@ from selenium import webdriver
 import random
 import string
 from transliterate import translit
+from ..url_holder import *
 from ..data_generator import *
 import sys
 sys.path.append('C:/Users/slipk/PycharmProjects/SprintUI5')
@@ -11,7 +12,7 @@ sys.path.append('C:/Users/slipk/PycharmProjects/SprintUI5')
 def driver():
     # Инициализация драйвера
     driver = webdriver.Chrome()
-    driver.get("https://stellarburgers.nomoreparties.site")
+    driver.get(url_home)
     #return driver
     yield driver
     driver.quit()
@@ -20,7 +21,7 @@ def driver():
 def driver_acc():
     # Инициализация драйвера
     driver_acc = webdriver.Chrome()
-    driver_acc.get("https://stellarburgers.nomoreparties.site")
+    driver_acc.get(url_home)
     #return driver
     yield driver_acc
     driver_acc.quit()
@@ -28,14 +29,14 @@ def driver_acc():
 @pytest.fixture(scope="function")
 def driver_reg():
     driver_reg = webdriver.Chrome()
-    driver_reg.get("https://stellarburgers.nomoreparties.site/register")
+    driver_reg.get(url_reg_form)
     yield driver_reg
     driver_reg.quit()
 
 @pytest.fixture(scope="function")
 def driver_log():
     driver_log = webdriver.Chrome()
-    driver_log.get("https://stellarburgers.nomoreparties.site/login")
+    driver_log.get(url_login)
     yield driver_log
     driver_log.quit()
 
