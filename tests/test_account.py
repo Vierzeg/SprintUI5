@@ -3,8 +3,10 @@
 import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from locators import *
+from ..locators import *
 from data_generator import user_data
+import sys
+sys.path.append('C:/Users/slipk/PycharmProjects/SprintUI5')
 
 
 class TestProfileAccess:

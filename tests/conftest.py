@@ -4,8 +4,9 @@ from selenium import webdriver
 import random
 import string
 from transliterate import translit
-from data_generator import *
-
+from ..data_generator import *
+import sys
+sys.path.append('C:/Users/slipk/PycharmProjects/SprintUI5')
 @pytest.fixture(scope="session")
 def driver():
     # Инициализация драйвера

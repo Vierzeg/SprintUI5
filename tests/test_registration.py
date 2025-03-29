@@ -3,8 +3,9 @@
 import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from locators import *
-
+from ..locators import *
+import sys
+sys.path.append('C:/Users/slipk/PycharmProjects/SprintUI5')
 
 def test_successful_registration(driver_reg, registration_data):
     # Используем данные из фикстуры registration_data
